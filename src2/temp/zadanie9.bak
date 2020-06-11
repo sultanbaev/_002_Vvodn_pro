@@ -1,0 +1,36 @@
+uses wingraph, wincrt;
+var x, y, gd, gm : integer;
+
+begin
+ gd:= detect;
+ initgraph (gd, gm, '');
+ randomize;
+
+ repeat
+ x := random (getmaxx);
+ y := random (getmaxy);
+// setcolor (white);
+
+//
+
+
+
+ putpixel (x, y, red);
+
+
+ until keypressed;
+
+
+
+
+
+
+
+
+
+
+
+
+ readkey;
+ closegraph;
+end.

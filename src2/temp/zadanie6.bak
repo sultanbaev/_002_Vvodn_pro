@@ -1,0 +1,61 @@
+uses wingraph, wincrt;
+var x, i, c, gd, gm : integer;
+
+begin
+ gd:= detect;
+ initgraph (gd, gm, '');
+
+
+
+  x := 35;
+  c := 0;
+
+  repeat
+   c := c + 1;
+     setcolor (white);
+  if c = 1 then
+   begin
+    setfillstyle (1, white);
+
+   end;
+
+
+
+
+   if c = 2 then
+   begin
+
+   // setcolor (blue);
+   // circle (x, 50, 20);
+   setfillstyle (1, blue);
+   // floodfill (x, 50, blue);
+
+   end;
+
+   if c = 3 then
+   begin
+
+   // setcolor (red);
+   // circle (x, 50, 20);
+    setfillstyle (1, red);
+  //  floodfill (x, 50, red);
+
+   end;
+
+
+   circle (x, 50, 20);
+
+   floodfill (x, 50, white);
+    x := x + 40;
+   if c = 3 then c := 0;
+   delay(100);
+  until (x > getmaxx);
+
+
+
+
+
+
+ readkey;
+ closegraph;
+end.
